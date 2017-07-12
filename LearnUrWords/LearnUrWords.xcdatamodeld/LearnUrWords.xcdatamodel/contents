@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1510" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Translation" representedClassName=".Translation" syncable="YES">
+        <attribute name="translation" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="word" maxCount="1" deletionRule="Nullify" destinationEntity="Word" inverseName="translations" inverseEntity="Word" syncable="YES"/>
+    </entity>
+    <entity name="Word" representedClassName=".Word" syncable="YES">
+        <attribute name="lastShowingTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="successfulAttempts" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="word" attributeType="String" syncable="YES"/>
+        <relationship name="translations" toMany="YES" deletionRule="Cascade" destinationEntity="Translation" inverseName="word" inverseEntity="Translation" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Translation" positionX="-54" positionY="9" width="128" height="75"/>
+        <element name="Word" positionX="-63" positionY="-18" width="128" height="105"/>
+    </elements>
 </model>
