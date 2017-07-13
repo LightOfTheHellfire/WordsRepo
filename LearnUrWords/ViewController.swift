@@ -29,8 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UISearchResultsUpda
     }
 
     @IBAction func addWord(_ sender: UIBarButtonItem) {
-        LocalNotification.instance.add()
-        //performSegue(withIdentifier: "ShowWordSegue", sender: nil)
+        performSegue(withIdentifier: "ShowWordSegue", sender: nil)
     }
     
 //MARK: TableView didSelectRowAt
@@ -67,6 +66,8 @@ class ViewController: UIViewController, UITableViewDelegate, UISearchResultsUpda
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableHeaderView = searchController.searchBar
+        Settings.renewDate()
+        LocalNotification.instance.addNotification(Settings.dateComponents)
     }
     
 //MARK: Loading Data
@@ -86,6 +87,12 @@ extension ViewController {
     @IBAction func unwindFromCheck(segue: UIStoryboardSegue) {
         
     }
+    
+    @IBAction func unwindFromEditVC(segue: UIStoryboardSegue) {
+        
+    }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  segue.identifier == "ShowWordSegue"

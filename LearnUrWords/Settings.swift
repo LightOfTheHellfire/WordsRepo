@@ -14,6 +14,16 @@ class Settings {
     static var daysFromPenultCheck = 6
     static var daysFromLastCheck = 20
     static var color = UIColor.gray
+    static var dateComponents = Calendar.current.dateComponents(in: .current, from: Date())
+    static var hour = 8
+    static var minute = 0
+    
+    static func renewDate() {
+        let date = Date()
+        var components = Calendar.current.dateComponents(in: .current, from: date)
+        components.day? += 1
+        Settings.dateComponents = DateComponents(calendar: Calendar.current, timeZone: .current, year: components.year, month: components.month, day: components.day, hour: Settings.hour, minute: Settings.minute)
+    }
 }
 
 extension Date {

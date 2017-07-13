@@ -225,9 +225,11 @@
                         <outlet property="tableView" destination="qcx-Fu-8mn" id="W0W-QU-hgZ"/>
                         <outlet property="wordTextField" destination="sqA-Ai-Tfu" id="M3B-cM-HWB"/>
                         <segue destination="5tU-fQ-eOS" kind="presentation" identifier="EditTranslationSegue" modalPresentationStyle="overCurrentContext" id="cex-uj-MDI"/>
+                        <segue destination="62I-c9-ALb" kind="unwind" identifier="unwindFromEditVC" unwindAction="unwindFromEditVCWithSegue:" id="y5r-Xy-Smp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otR-lR-C24" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="62I-c9-ALb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6026" y="240"/>
         </scene>
@@ -303,6 +305,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="CheckViewController"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dB4-9N-Gb5"/>
                     <connections>
                         <outlet property="translationTextField" destination="ETd-kF-4jb" id="oDB-PC-uLe"/>
                         <outlet property="wordLabel" destination="BNL-GX-pOW" id="nLV-GV-mMg"/>

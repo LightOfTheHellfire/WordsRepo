@@ -14,7 +14,6 @@
 		84417BC81EF06542004F1015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84417BC71EF06542004F1015 /* Assets.xcassets */; };
 		84417BCB1EF06542004F1015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84417BC91EF06542004F1015 /* LaunchScreen.storyboard */; };
 		8473E63A1F163DDE00E054B3 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473E6391F163DDE00E054B3 /* LocalNotification.swift */; };
-		84740D681F10EB220088CFEC /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84740D671F10EB220088CFEC /* Notify.swift */; };
 		848B06A11F12F9BF000523B4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B06A01F12F9BE000523B4 /* EditViewController.swift */; };
 		84B5DC091F15A96A00BCD0D8 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5DC081F15A96A00BCD0D8 /* CheckViewController.swift */; };
 		84B5DC0B1F15ADE400BCD0D8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5DC0A1F15ADE400BCD0D8 /* ResultViewController.swift */; };
@@ -37,7 +36,6 @@
 		84417BCA1EF06542004F1015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84417BCC1EF06542004F1015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8473E6391F163DDE00E054B3 /* LocalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalNotification.swift; path = ../../../../../notes/notes/LocalNotification.swift; sourceTree = "<group>"; };
-		84740D671F10EB220088CFEC /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
 		848B06A01F12F9BE000523B4 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		84B5DC081F15A96A00BCD0D8 /* CheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		84B5DC0A1F15ADE400BCD0D8 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				84D4A49D1EF2B26C006A69FF /* Translation+CoreDataClass.swift */,
 				84D4A49F1EF2B26C006A69FF /* Word+CoreDataClass.swift */,
 				84D4A4AB1EF2B515006A69FF /* CoreDataManager.swift */,
-				84740D671F10EB220088CFEC /* Notify.swift */,
 				84B5DC0C1F15B4F400BCD0D8 /* Settings.swift */,
 			);
 			name = Model;
@@ -230,7 +227,6 @@
 				84B5DC0D1F15B4F400BCD0D8 /* Settings.swift in Sources */,
 				84417BBE1EF06542004F1015 /* AppDelegate.swift in Sources */,
 				84B82AD81F14218A008B4C97 /* Word+CoreDataProperties.swift in Sources */,
-				84740D681F10EB220088CFEC /* Notify.swift in Sources */,
 				8473E63A1F163DDE00E054B3 /* LocalNotification.swift in Sources */,
 				84417BC61EF06542004F1015 /* LearnUrWords.xcdatamodeld in Sources */,
 				84D4A4AC1EF2B515006A69FF /* CoreDataManager.swift in Sources */,

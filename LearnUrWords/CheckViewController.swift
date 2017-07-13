@@ -19,7 +19,6 @@ class CheckViewController: UIViewController {
     var filteredWords: [Word] = []
     let date = Date()
     var isWord = true
-    let notify = Notify()
 
     
     override func viewDidLoad() {
@@ -28,7 +27,8 @@ class CheckViewController: UIViewController {
         view.backgroundColor = Settings.color
         filterContent()
         getWord()
-        LocalNotification.instance.add()
+        Settings.renewDate()
+        LocalNotification.instance.addNotification(Settings.dateComponents)
     }
     
     
