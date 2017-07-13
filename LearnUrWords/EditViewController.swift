@@ -23,6 +23,7 @@ class EditViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = Settings.color
         tableView.delegate = self
         tableView.dataSource = self
         if word != nil {

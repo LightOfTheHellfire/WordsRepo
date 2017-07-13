@@ -15,13 +15,16 @@ class TranslationViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     var translation: Translation?
     var word: Word?
+    @IBOutlet weak var stackView: UIStackView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         if translation != nil {
             textField.text = translation?.translation
         }
     }
+    
     
 //MARK: Actions
     

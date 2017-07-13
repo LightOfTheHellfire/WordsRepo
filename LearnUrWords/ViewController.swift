@@ -16,7 +16,8 @@ class ViewController: UIViewController, UITableViewDelegate, UISearchResultsUpda
     var searchController: UISearchController!
     var searchResult: [Word] = []
     let textCellIdentifier = "TextCell"
-    let check = CheckViewController()
+    @IBOutlet weak var viewOnTable: UIView!
+    
     var fetchedResultsController = CoreDataManager.instance.fetchedResultsController(entityName: "Word", keyForSort: "word", isAscending: true)
     var tableData: [Word] = []
 
@@ -57,6 +58,7 @@ class ViewController: UIViewController, UITableViewDelegate, UISearchResultsUpda
     func setUpObjects() {
         self.view.backgroundColor = UIColor.gray
         tableView.backgroundColor = UIColor.gray
+        viewOnTable.backgroundColor = UIColor.gray
         searchController = UISearchController(searchResultsController: nil)
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
@@ -80,6 +82,10 @@ class ViewController: UIViewController, UITableViewDelegate, UISearchResultsUpda
 
 //MARK: Navigation
 extension ViewController {
+    
+    @IBAction func unwindFromCheck(segue: UIStoryboardSegue) {
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  segue.identifier == "ShowWordSegue"

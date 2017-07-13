@@ -21,7 +21,7 @@ class ResultViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wordLabel.text = word
+        wordLabel.text = "All meanings of \(word):"
         translationsPickerView.delegate = self
         translationsPickerView.dataSource = self
         checkAnswers()
@@ -36,12 +36,15 @@ class ResultViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         return 1
     }
     
+//MARK: UIPickerView
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return checkedTranslations.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return checkedTranslations[row]
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        
+        let translation = checkedTranslations[row]
+        return NSAttributedString(string: translation, attributes: [NSForegroundColorAttributeName:UIColor.red])
     }
     
     //MARK: Actions
@@ -49,12 +52,12 @@ class ResultViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         var correctTranslations = 0
         for translation in translations {
             for checked in checkedTranslations {
-                if translation == checked {
+                if translation.lowercased() == checked.lowercased() {
                     correctTranslations += 1
                 }
             }
         }
-        if correctTranslations > 1 {
+        if correctTranslations > 0 {
             isSuccessful = true
         }
     }
